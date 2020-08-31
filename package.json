@@ -1,0 +1,21 @@
+{
+  "name": "myotp",
+  "version": "1.0.0",
+  "description": "some otp",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node test/test",
+    "build": "webpack -p"
+  },
+  "keywords": [
+    "otp"
+  ],
+  "author": "Recent.LL",
+  "license": "MIT",
+  "dependencies": {
+    "thirty-two": "^1.0.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.1"
+  }
+}
