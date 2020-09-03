@@ -12,9 +12,7 @@
   ],
   "author": "Recent.LL",
   "license": "MIT",
-  "dependencies": {
-    "thirty-two": "^1.0.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "webpack": "^4.44.1"
   }

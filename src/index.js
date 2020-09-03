@@ -23,10 +23,6 @@ OTP.prototype.docodeSecret = function (secret) {
 
 OTP.prototype.generate_otp = function (input) {
   let hmacObj = this.hmacObj;
-  // node自带的crypto模块, 一个create 配一个update, 不然会报错，
-  // 使用jssha的话，每update一次 remainder数组的数据被保留了，
-  // 理论上也是得create一次，update一次，如再次update时，remainder就会累加，参数相同但生成的数据不一样了, 
-  // 所以本项目中修改了jssha的update函数，每update一次，初始化一次remainder数组
   hmacObj.update(this.int_to_bytestring(input), 1);
   // get HMAC ans
   let hmac = hmacObj.getHMAC('BYTES');

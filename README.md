@@ -1,10 +1,7 @@
 # myotp
 基于google auth的otp
-# 可能的问题
-使用的第三方thirty-two，base32函数中用到了Buffer()函数，在高点的node版本中会报warning, 
-打包时修改thirty-two里的encode, decode里的Buffer函数，
-将 new Buffer('xxxxxx') ==> new Buffer.from('xxxxxx'),将字条串转buffer 共两处
-将 new Buffer(n) ==> new Buffer.alloc(n), 新建n个空间的buffer 共两处
 
 # 使用方法
-参照 test/test.js 
+* 已将依赖的sha, base32 放到lib下，所以可不用install，可直接使用, 
+* 如需要修改重新打包，请 npm install --save-dev webpack 后，运行webpack -p就可
+* 参照 test/test.js 

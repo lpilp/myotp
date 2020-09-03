@@ -1,5 +1,5 @@
-// const OTP = require('../src/index.js')
-const OTP = require('../dist/index')
+// const OTP = require('../src/index.js') // 原始的
+const OTP = require('../dist/index') //打包过的，
 const MyCode = require('../lib/mycode')
 
 // google auth 是用的这种方式加密种子，可自行更新自定义方法
@@ -21,6 +21,6 @@ console.log('code:' + myotp.generate_now());
 
 // 第二个参数，支持偏移，1表示该时间的上下一个6数据都判定为正确，各个设备可能时间上存在一定的差别,
 // 或是手动输入时照顾下中老年人，手速慢 ^_^
-console.log('check: ' + myotp.check_now('412035',1)); 
+console.log('check: ' + myotp.check_now('424014',1)); 
 
 console.log('google auth url: ' + myotp.getOtpUrl());
